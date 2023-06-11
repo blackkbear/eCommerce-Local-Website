@@ -1,0 +1,76 @@
+
+    .s1SubSec1
+    {
+        grid-area: s1SubSec1;
+        padding-left: 10%;
+        
+    }
+
+
+    .s1SubSec3
+    {
+        grid-area: s1SubSec3;
+        padding-left: 90%;
+      
+    }
+
+    .s1SubSec4 a
+    {
+        grid-area: s1SubSec4;
+        padding-left: 50%;
+       
+    }
+
+    /*<<<<<<<<<<<<<<<<<<<<<<<*/
+
+/**/
+
+
+    .input
+{
+    grid-area: input;
+}
+
+.buscar
+{
+    grid-area: boton;
+    width: 100%;
+    border: none;
+    outline: none;
+    background: rgb(31, 30, 46);
+}
+
+.iconCarrito, .carrito
+{
+    background: rgb(31, 30, 46);
+    color: #fff;
+    font-size: 20px;
+    border: none;
+    outline: none;
+}
+
+.carrito:hover, .iconCarrito:hover
+{
+    background: rgb(31, 30, 46);
+    color: rgb(111, 207, 160);
+    border-radius: 2px;
+}
+
+input
+{
+    border: none;
+    outline: none;
+    grid-area: input;
+}
+
+.iconBuscar
+{
+    background: rgb(31, 30, 46);
+    color: #fff;
+}
+
+.buscar:hover, .iconBuscar:hover
+{
+    background: rgb(31, 30, 46);
+    color: rgb(111, 207, 160);
+}

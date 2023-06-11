@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+
+table{
+    height: 100%;
+    width: 100%;
+    margin: auto;
+    max-width: 900px;
+    padding: 5px;
+    font-size: 18px;
+    font-family: Tahoma;
+    text-align: center;
+}
+
+
+
+tr{
+    border-top: 1px solid #c1c3c1;
+    border-bottom: 1px solid #c1c3c1;
+
+}
+
+.titulo {
+    background-color: rgb(31, 30, 46);
+    color: rgb(245, 248, 255);
+}
+
+.detalle {
+    background-color: rgb(213, 214, 216);
+    color: rgb(61, 67, 102);
+}
+.detalle:hover{
+    background-color:rgb(12, 187, 156);
+    color: #002962;
+}
+
+.insertProduct{
+    width: 450px;
+    margin: auto;
+}
+
+.insertProduct, h1{
+    color: #252C36;
+}
+
+hr{
+    border: 0;
+    background: #CCC;
+    height: 1px;
+    margin: 10px 0;
+    display: block;
+}
+form{
+    background: #fff;
+    margin: auto;
+    padding: 20px 50px;
+    border: 1px solid #d1d1d1;
+
+}
+
+label{
+    display: block;
+    font-size: 12pt;
+    font-family: 'Roboto Condensed', sans-serif;
+    margin: 15px auto 5px auto;
+}
+
+input, select{
+    display: block;
+    width: 90%;
+    font-size: 11pt;
+    padding: 5px;
+    border: 1px solid #85929e;
+    border-radius: 5px;
+}
+
+.btn_insert_products, .btn_update_products{
+    font-size: 12pt;
+    background: #263F91;
+    padding: 10px;
+    color: #fff;
+    letter-spacing: 1px;
+    border: 0;
+    cursor: pointer;
+    margin: 15px auto;
+    width: 95%;
+
+}
+
+.alerte{
+    width: 100%;
+    background: #66e07d66;
+    border-radius: 6px;
+    margin: 20px auto;
+
+}
+
+.msg_error{
+    color: #e65656;
+}
+
+.msg_save{
+    color: #126e00;
+}
+
+.alerte p{
+    padding: 10px;
+}

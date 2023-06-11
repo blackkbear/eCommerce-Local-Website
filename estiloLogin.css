@@ -1,0 +1,115 @@
+*
+{
+    margin: 0;
+    padding: 0;
+
+}
+
+body
+{
+    background-image: url(backgroundLogin1.png);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.form
+{
+
+    width: 30%;
+    max-width: 100%;
+    margin: 10% 35%;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    grid-template-areas: "contenedor";
+}
+
+.contenedor
+{
+    grid-area: contenedor;
+    background-color: #fff;
+    width: 100%;
+    padding: 20px;
+    border-radius: 30px;
+
+}
+
+
+h1
+{
+    text-align: center;
+    font-size: 30px;
+    color: black;
+    padding-bottom: 20px;
+}
+
+p
+{
+    padding-top: 17px;
+    text-align: center;
+}
+
+input[type="text"], input[type="password"], input[type="date"], select
+{
+    font-size: 14px;
+    width: 92%;
+    padding: 10px;
+    border: none;
+    outline: none;
+    grid-area: input;
+}
+
+.separador
+{
+    width: auto;
+    max-width: 100%;
+    margin: auto auto;
+    display: grid;
+    grid-gap: -10px;
+    grid-template-columns: repeat(1, 0fr);
+    grid-template-rows: repeat(2, 0fr);
+    grid-template-areas: "icon input";
+    margin-bottom: 15px;
+    border: 2px solid #aaa;
+    border-radius: 5px;
+}
+
+.icon
+{
+    padding: 50%;
+    grid-area: icon;
+    min-width: 50px;
+    text-align: left;
+    color: rgb(12, 187, 156);
+}
+
+.boton
+{
+    border: none;
+    width: 100%;
+    color: white;
+    font-size: 20px;
+    background: rgb(12, 187, 156);
+    padding: 15px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.boton:hover
+{
+    background: rgb(39, 183, 113);
+
+}
+
+a
+{
+    text-decoration: none;
+    color: violet;
+    font-weight: 400;
+}
+
+a:hover
+{
+    color: yellowgreen;
+}

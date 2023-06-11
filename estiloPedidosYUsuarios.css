@@ -1,0 +1,389 @@
+
+
+* {
+    list-style: none;
+    margin: 0;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.nav-main {
+    /*position fixed hace que el nav  se quede en el principio cuando se hace scroll*/
+    position: fixed;
+    top: 0;
+    left: 75px;
+    width: 100%;
+    height: 60px;
+    background-color: rgb(20, 35, 44);
+    /*display flex reemplaza el float left, permite que los items esten a la par*/
+    display: flex;
+    /* flex wrap permite que esten los items a la par dentro del menu */
+    flex-wrap: wrap;
+    /* z index es un menu que debe ir arriba siempre*/
+    z-index: 1;
+}
+
+.nav-main p {
+    display: flex;
+    /*alinea los items uno al lado del otro*/
+    flex-wrap: wrap;
+    padding-left: 15px;
+    padding-top: 20px;
+    display: block;
+    /*le da una altura y ancho al p*/
+    height: 100%;
+    padding: 0 10px;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-family: 'Share Tech mono';
+    font-size: 19px;
+    font-weight: 800;
+    /*line height es para despegarlo desde arriba*/
+    line-height: 60px;
+}
+
+
+
+.nav-main .botonCerrar li a  {
+    display: flex;
+    left: 90%;
+    margin-top: 15px;
+    color: rgb(59, 167, 255);
+    font-size: 17px;
+    text-decoration: none;
+    /* white space no wrap es para que texto se quede horizontal */
+    white-space: nowrap;
+    transition: all 0.2s ease-in-out;
+    border-radius: 5px;
+
+    height: 20px;
+    float: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  
+    
+    
+}
+
+.nav-main .usuarioIniciadoAdmin {
+    color: rgb(255, 255, 255);
+    float: none;
+    font-size: 20px;
+  position: absolute;
+  white-space: nowrap;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+}
+
+.nav-main .botonCerrar li a:hover {
+    color: #000000;
+    background-color: rgb(59, 183, 255);
+
+   
+}
+
+.usuarioIniciadoAdmin li a {
+    color: rgb(255, 255, 255);
+
+
+}
+
+
+/*barra de busqueda */
+
+/* .nav-main .search i {
+    text-align: center;
+    padding: 0 10px;
+    position: absolute;
+    left: 69.5%;
+    margin: 15px;
+    color: #fff;
+    font-size: 29px;
+} */
+
+
+/*boton de buscar para barra */
+
+/* .nav-main input {
+    position: fixed;
+    left: 20%;
+    align-items: center;
+    padding: 0 10px;
+    width: 50%;
+    font-size: 22px;
+    height: 29px;
+    border-radius: 12px;
+    line-height: 29px;
+    outline: none;
+    border: none;
+    background: #9e9daa;
+    color: #fff;
+    margin: 15px;
+} */
+
+.sidebarLogo {
+    position: fixed;
+    top: 0px;
+    left: 0;
+    height: 100%;
+    width: 78px;
+    background: #09090f;
+    padding: 6px 14px;
+    transition: all 0.5s ease;
+    z-index: 3;
+}
+
+.sidebarLogo.active {
+    width: 240px;
+}
+
+.sidebarLogo .logo_content .logo {
+    color: #fff;
+    display: flex;
+    height: 50px;
+    width: 100%;
+    align-items: center;
+    pointer-events: none;
+    transition: all 0s ease;
+    opacity: 0;
+    
+}
+
+.sidebarLogo.active .logo_content .logo {
+    opacity: 1;
+    pointer-events: none;
+}
+
+.logo_content .logo i {
+    font-size: 27px;
+    margin-right: 5px;
+    height: 50px;
+    min-width: 50px;
+    border-radius: 12px;
+    line-height: 50px;
+    text-align: center;
+}
+
+.logo_content .logo .logo_name {
+    font-size: 20px;
+    font-weight: 400;
+    text-align: center;
+    display: flex;
+}
+
+.sidebarLogo .logo_name {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.sidebarLogo.active .logo_name {
+    opacity: 1;
+    pointer-events: auto;
+    font-size: 30px;
+    transition: all 0.4s ease-in-out;
+}
+
+.sidebarLogo ul {
+    margin-top: 7px;
+}
+
+.sidebarLogo ul li {
+    height: 50px;
+    width: 100%;
+    position: relative;
+    margin: 0 5px;
+    line-height: 50px;
+    transition: all 0.5s ease;
+}
+
+.sidebarLogo ul li .tooltip {
+    position: absolute;
+    left: 90px;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 6px;
+    height: 35px;
+    width: 122px;
+    background: #fff;
+    line-height: 35px;
+    text-align: center;
+    box-shadow: 0 5px 10px rgb(161, 160, 160);
+    transition: 0s;
+    opacity: 0;
+    pointer-events: none;
+    display: block;
+}
+
+.sidebarLogo.active ul li .tooltip {
+    display: none;
+}
+
+.sidebarLogo ul li:hover .tooltip {
+    top: 50%;
+    transition: all 0.5s ease;
+    opacity: 1;
+   
+}
+
+.sidebarLogo ul li a {
+    color: rgb(255, 255, 255);
+    display: flex;
+    
+    text-decoration: none;
+    transition: all 0.5 s ease;
+    font-size: 20px;
+    border-radius: 12px;
+    white-space: nowrap;
+    
+    transition: all 0.2s ease-in-out;
+    height: 40px;
+
+
+}
+
+
+/*acomoda los iconos en el sidebar */
+
+.sidebarLogo ul li i {
+    /* height: 50px;
+    text-align: center;
+    max-height: 200px;
+
+
+position: absolute;
+float: left;
+    min-width: 40px;
+    border-radius: 12px;
+    line-height: 50px;
+    
+    width: 40px;
+      */
+      max-height: 200px;
+      border-radius: 12px;
+      line-height: 50px;
+      transition: all 0.1 ease;
+    text-align: center;
+        width: 2px;
+        height: 2px;
+        position: absolute;
+        right: 5%;
+        top: 10px;
+        transform: translate(-50%, -50%);
+        padding: 20px;
+        line-height: 30px;
+}
+
+.sidebarLogo .links_name {
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.5 ease;
+}
+
+.sidebarLogo.active .links_name {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.sidebarLogo ul li a:hover {
+    color: #4dffe7;
+    
+}
+
+
+
+.home_content {
+    position: absolute;
+    height: 100%;
+    top: 40px;
+    width: 70%;
+    left: 90px;
+    transition: all 0.5s ease;
+    margin-left: X;
+    line-height: 50px;
+}
+
+.home_content .text {
+    font-size: 25px;
+    font-weight: 500;
+    color: #414141;
+    margin: 12px;
+}
+
+
+.sidebarLogo.active~.home_content {
+    left: 240px;
+    width: calc(100%-240px);
+}
+
+.sidebarLogo #toggle {
+    position: absolute;
+    top: 10px;
+    margin-right: 5%;
+    left: 50%;
+    width: 40px;
+    line-height: 50px;
+    height: 40px;
+    font-size: 20px;
+    background-color: #c5c5c5;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(-50%);
+    text-align: center;
+    border-radius: 12px;
+    min-width: 40px;
+}
+
+.sidebarLogo #toggle:hover {
+    background-color: #6e6d6d;
+}
+
+
+/*antes de hacer click en toggle*/
+
+.sidebarLogo #toggle::before {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 3px;
+    background: rgb(255, 255, 255);
+    transform: translateY(-5px);
+    transition: all 0.3s ease-in-out;
+    font-weight: bolder;
+}
+
+.sidebarLogo #toggle::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 3px;
+    background: rgb(255, 255, 255);
+    transform: translateY(5px);
+    transition: all 0.3s ease-in-out;
+    font-weight: bolder;
+}
+
+.sidebarLogo #toggle.active::before {
+    transform: translateY(0px) rotate(45deg);
+}
+
+.sidebarLogo #toggle.active::after {
+    transform: translateY(0px) rotate(-45deg);
+}
+
+.sidebarLogo.active #toggle {
+    left: 90%;
+}
